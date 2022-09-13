@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/style.css'%}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="app">
+            <div class="app-header">
+                <h1>Note App</h1>
+            </div>
+
+            <div class="note">
+                <div class="note-header">
+                    <h3>
+                        <label for="note-submit">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 32 32">
+                                <title>Back</title>
+                                <path d="M11 16l13-13v-3l-16 16 16 16v-3l-13-13z"></path>
+                            </svg>
+
+                        </label>
+                    </h3>
+                </div>
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <textarea name="note" id="" cols="30" rows="10"></textarea>
+                    <input type="submit" value="" id="note-submit" style="display: none;">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
